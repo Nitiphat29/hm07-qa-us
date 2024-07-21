@@ -9,7 +9,6 @@ test('Request status code should be 200', async () => {
 	} catch (error) {
 		console.error(error);
 	}
-
 	expect(actualResponseCode).toBe(200);
 });
 
@@ -22,6 +21,5 @@ test('Response body should contain the expected data', async () => {
 	} catch (error) {
 		console.error(error);
 	}
-
 	expect(actualResponseBody[0]["name"]).toBe("Everything You Need");
 });

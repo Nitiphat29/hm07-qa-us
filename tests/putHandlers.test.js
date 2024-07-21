@@ -16,7 +16,8 @@ test('PUT request: check response status code', async () => {
 		});
 		
 	} catch (error) {
-		console.error(error);
+	  console.error(error);
+	  throw error;
 	}
 	   expect(response.status).toBe(200);
 });
@@ -33,9 +34,9 @@ test('PUT request: check response body', async () => {
 
 		const responseBody = await response.json();
 		expect(response.status).toBe(200);
-
-		expected(responseBody.ok).toBe(true);
+		expect(responseBody.ok).toBe(true);
 	} catch (error) {
 		console.error(error);
+		throw error;
 	}
 });
