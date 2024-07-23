@@ -5,7 +5,7 @@ const requestBodyPost = {
 	"cardID": 1
   }
 
-test('DELETE request: check response status code', async () => { 
+test('response status code should return 200', async () => { 
 	let actualStatus;
     try {
 		const responsePost = await fetch(`${config.API_URL}/api/v1/kits`, {
@@ -26,7 +26,7 @@ test('DELETE request: check response status code', async () => {
 	} 
 	   expect(actualStatus).toBe(200);
 });
-test('DELETE request: check response body', async () => {
+test('response body status should return 200', async () => {
     try {
 		const response = await fetch(`${config.API_URL}/api/v1/kits`, {
 			method: 'DELETE',

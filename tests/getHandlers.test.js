@@ -13,7 +13,7 @@ test('Request status code should be 200', async () => {
 });
 
 
-test('Response body should contain the expected data', async () => {
+test('check the respose body should contains the valuse match the expected results', async () => {
 	let actualResponseBody;
 	try {
 		const response = await fetch(`${config.API_URL}/api/v1/warehouses`);
